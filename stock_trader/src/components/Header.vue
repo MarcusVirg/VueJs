@@ -1,27 +1,23 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="nav nav-pills nav-fill bg-light">
   <router-link class="navbar-brand" to="/">Stock Trader</router-link>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li> -->
-      <li class="nav-item active">
-        <router-link class="nav-link" to="/portfolio">Portfolio</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link class="nav-link" to="/stocks">Stocks</router-link>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <router-link class="nav-link active" to="/stocks">Stocks</router-link>
+    </li>
+    <li class="nav-item">
+      <router-link class="nav-link" to="/portfolio">Portfolio</router-link>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Save Data</a>
+        <a class="dropdown-item" href="#">Load Data</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">End Day</a>
+      </div>
+    </li>
+  </ul>
 </nav>
 </template>
 
